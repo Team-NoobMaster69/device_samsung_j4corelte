@@ -20,7 +20,9 @@ TARGET_KERNEL_CONFIG := j4corelte_defconfig
 
 # Filesystem
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1644167168
-BOARD_VENDORIMAGE_PARTITION_SIZE := 260046848
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Inherit from common msm8917-common
 -include device/samsung/msm8917-common/BoardConfigCommon.mk
