@@ -19,26 +19,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit MIUI Camera
-#$(call inherit-product, vendor/MiuiCamera/config.mk)
-
-TARGET_BOOT_ANIMATION_RES := 720
-
 # Inherit from j4corelte device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-
-# Build with go flags (modificado)
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults_common.mk)
-
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := j4corelte
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_NAME := lineage_j4corelte
 PRODUCT_MODEL := Galaxy J4 Core
+
+TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 TARGET_VENDOR := samsung

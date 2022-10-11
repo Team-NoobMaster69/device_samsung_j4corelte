@@ -21,14 +21,8 @@ DEVICE_PATH := device/samsung/j4corelte
 # Kernel
 TARGET_KERNEL_CONFIG := j4corelte_defconfig
 
-# Import prebuilt kernel for reduce build time
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+# Config Kernel
 TARGET_KERNEL_HEADER_ARCH := arm
-#TARGET_KERNEL_SOURCE := kernel/samsung/msm8917
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
-KERNEL_TOOLCHAIN :=/media/leonelartuzi/disco2/los_181/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin
-
-#TARGET_PREBUILT_KERNEL := device/samsung/j4primelte/prebuilt/zImage-dtb
 
 #Low ram
 TARGET_HAS_LOW_RAM := true
@@ -40,12 +34,6 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 260046848
 #Camera
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /vendor/bin/mm-qcamera-daemon=27
-
-#TARGET_TS_MAKEUP             := true
-#QCAMERA_HAL1_SUPPORT := true
-#USE_DISPLAY_SERVICE := true
-#TARGET_HAS_LEGACY_CAMERA_HAL1 := true
-
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
@@ -62,7 +50,6 @@ BOARD_USES_QC_TIME_SERVICES := true
 
 # SurfaceFlinger
 TARGET_USE_QCOM_SURFACEFLINGER := true
-
 TARGET_OTA_ASSERT_DEVICE := j4corelte, j4coreltejx
 
 # Inherit from the proprietary version
